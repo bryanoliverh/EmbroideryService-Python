@@ -30,7 +30,7 @@ def showPricing(charPricing: dict, fontPricing: dict, fontSize: int):
 
 
 def requestQuote(charPricing: dict, fontPricing: dict):
-    string = input("Enter string: ").replace(" ", "")
+    string = input("Enter characters that you want to print: ").replace(" ", "")
     fontSize = int(input("Enter font size (24/36/48): "))
     formattedFontPricing = {int(k): v for k, v in fontPricing.items()}
 
@@ -85,7 +85,6 @@ def main():
 
     readPricing("characters.txt", charPricing)
     readPricing("fonts.txt", fontPricing)
-    print(fontPricing)
     while True:
         print("Welcome to Bryan's Embroidery Services!")
         print("==========================================")
